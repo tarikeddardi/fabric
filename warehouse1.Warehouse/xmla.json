@@ -23,7 +23,7 @@
             "formatString": "0",
             "sourceProviderType": "int",
             "sourceLineageTag": "ConstructionID",
-            "summarizeBy": "none",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -61,7 +61,7 @@
         "annotations": [
           {
             "name": "IsTableInBiModel",
-            "value": "True"
+            "value": "False"
           }
         ]
       },
@@ -76,7 +76,7 @@
             "formatString": "0",
             "sourceProviderType": "int",
             "sourceLineageTag": "FinancementID",
-            "summarizeBy": "none",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -114,7 +114,7 @@
         "annotations": [
           {
             "name": "IsTableInBiModel",
-            "value": "True"
+            "value": "False"
           }
         ]
       },
@@ -129,7 +129,7 @@
             "formatString": "0",
             "sourceProviderType": "int",
             "sourceLineageTag": "TypologieID",
-            "summarizeBy": "none",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -167,7 +167,7 @@
         "annotations": [
           {
             "name": "IsTableInBiModel",
-            "value": "True"
+            "value": "False"
           }
         ]
       },
@@ -182,7 +182,7 @@
             "formatString": "0",
             "sourceProviderType": "bigint",
             "sourceLineageTag": "LogementID",
-            "summarizeBy": "count",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -197,7 +197,7 @@
             "formatString": "0",
             "sourceProviderType": "int",
             "sourceLineageTag": "TypologieID",
-            "summarizeBy": "none",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -212,7 +212,7 @@
             "formatString": "0",
             "sourceProviderType": "int",
             "sourceLineageTag": "ConstructionID",
-            "summarizeBy": "none",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -227,7 +227,7 @@
             "formatString": "0",
             "sourceProviderType": "int",
             "sourceLineageTag": "FinancementID",
-            "summarizeBy": "none",
+            "summarizeBy": "sum",
             "annotations": [
               {
                 "name": "SummarizationSetBy",
@@ -266,7 +266,7 @@
         "annotations": [
           {
             "name": "IsTableInBiModel",
-            "value": "True"
+            "value": "False"
           }
         ]
       }
