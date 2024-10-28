@@ -1,0 +1,12 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Lakehouse",
+    "displayName": "lakehouse1",
+    "description": "Les données géolocalisé île de france"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "da5d98d0-91bc-43fa-837b-d70213731e3b"
+  }
+}
