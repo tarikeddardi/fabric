@@ -1,0 +1,360 @@
+{
+  "compatibilityLevel": 1604,
+  "model": {
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.138.7462.2 (Main)"
+      },
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"DatabaseQuery\"]"
+      },
+      {
+        "name": "PBI_ProTooling",
+        "value": "[\"WebModelingEdit\"]"
+      }
+    ],
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "culture": "en-US",
+    "cultures": [
+      {
+        "name": "en-US",
+        "linguisticMetadata": {
+          "content": {
+            "Language": "en-US",
+            "Version": "1.0.0"
+          },
+          "contentType": "json"
+        }
+      }
+    ],
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "annotations": [
+          {
+            "name": "PBI_IncludeFutureArtifacts",
+            "value": "False"
+          }
+        ],
+        "expression": [
+          "let",
+          "    database = Sql.Database(\"OYIGME45L6UUJF4W2HIKGZMYDM-DFFQ7TG2DPCE7CIBQ5RN2SWZSM.datawarehouse.fabric.microsoft.com\", \"24437e71-b800-484c-9330-61206e6c1ab2\")",
+          "in",
+          "    database"
+        ],
+        "kind": "m",
+        "lineageTag": "451c4474-f893-4552-a8c3-51d9c0ce25aa"
+      }
+    ],
+    "relationships": [
+      {
+        "name": "056f174b-f739-f256-d579-82dde0d61eec",
+        "fromColumn": "ConstructionID",
+        "fromTable": "FactLogement",
+        "toColumn": "ConstructionID",
+        "toTable": "DimConstruction"
+      },
+      {
+        "name": "d4e44181-4ceb-14f1-fa7e-7077c9ee92ac",
+        "fromColumn": "FinancementID",
+        "fromTable": "FactLogement",
+        "toColumn": "FinancementID",
+        "toTable": "DimFinancement"
+      },
+      {
+        "name": "26633e4e-b2d7-d73d-a410-7b5da5fe4646",
+        "fromColumn": "TypologieID",
+        "fromTable": "FactLogement",
+        "toColumn": "TypologieID",
+        "toTable": "DimTypologie"
+      }
+    ],
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "FactLogement",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "LogementID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "2c612da5-64e7-4c7e-b097-b4e7b94f338c",
+            "sourceColumn": "LogementID",
+            "sourceLineageTag": "LogementID",
+            "sourceProviderType": "bigint",
+            "summarizeBy": "count"
+          },
+          {
+            "name": "TypologieID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "73b85ef9-ef23-4849-bc19-7a8f26984c72",
+            "sourceColumn": "TypologieID",
+            "sourceLineageTag": "TypologieID",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "ConstructionID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0565bdb6-4750-420a-af55-b6cdf5bd0864",
+            "sourceColumn": "ConstructionID",
+            "sourceLineageTag": "ConstructionID",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "FinancementID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "c79b0207-c247-4bd7-aff4-b12c963a5cee",
+            "sourceColumn": "FinancementID",
+            "sourceLineageTag": "FinancementID",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "NbLogement",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "23e83b16-2c05-43c2-a388-b4dfe00c7fa6",
+            "sourceColumn": "NbLogement",
+            "sourceLineageTag": "NbLogement",
+            "sourceProviderType": "int",
+            "summarizeBy": "sum"
+          }
+        ],
+        "lineageTag": "a72fcf0d-c55a-4b86-9432-0ec661d3337c",
+        "partitions": [
+          {
+            "name": "FactLogement",
+            "mode": "directLake",
+            "source": {
+              "entityName": "FactLogement",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo",
+              "type": "entity"
+            }
+          }
+        ],
+        "sourceLineageTag": "[dbo].[FactLogement]"
+      },
+      {
+        "name": "DimTypologie",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "TypologieID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "db54f933-591e-45c5-ba29-9bb3bbfaedbd",
+            "sourceColumn": "TypologieID",
+            "sourceLineageTag": "TypologieID",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "Typologie",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "f32a4b2d-ee67-4a08-8eca-1fc00c924757",
+            "sourceColumn": "Typologie",
+            "sourceLineageTag": "Typologie",
+            "sourceProviderType": "varchar(255)",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "140af890-f18a-48c0-8bc6-20fa43b2c2bf",
+        "partitions": [
+          {
+            "name": "DimTypologie",
+            "mode": "directLake",
+            "source": {
+              "entityName": "DimTypologie",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo",
+              "type": "entity"
+            }
+          }
+        ],
+        "sourceLineageTag": "[dbo].[DimTypologie]"
+      },
+      {
+        "name": "DimConstruction",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "ConstructionID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "f45e2ad6-6afa-4f72-86de-9114c0257c1a",
+            "sourceColumn": "ConstructionID",
+            "sourceLineageTag": "ConstructionID",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TypeConstruction",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "2050c631-ceb1-4fa1-a4a0-259bacf1039e",
+            "sourceColumn": "TypeConstruction",
+            "sourceLineageTag": "TypeConstruction",
+            "sourceProviderType": "varchar(255)",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "3fd484fb-9aad-4ed1-b78f-17a8712ec154",
+        "partitions": [
+          {
+            "name": "DimConstruction",
+            "mode": "directLake",
+            "source": {
+              "entityName": "DimConstruction",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo",
+              "type": "entity"
+            }
+          }
+        ],
+        "sourceLineageTag": "[dbo].[DimConstruction]"
+      },
+      {
+        "name": "DimFinancement",
+        "annotations": [
+          {
+            "name": "PBI_ResultType",
+            "value": "Table"
+          }
+        ],
+        "columns": [
+          {
+            "name": "FinancementID",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "int64",
+            "formatString": "0",
+            "lineageTag": "0006fe58-4885-4973-9ce8-415f5e8d8940",
+            "sourceColumn": "FinancementID",
+            "sourceLineageTag": "FinancementID",
+            "sourceProviderType": "int",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "TypeFinancement",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ],
+            "dataType": "string",
+            "lineageTag": "bb7c0c3e-2fc1-4207-a559-c910620ff849",
+            "sourceColumn": "TypeFinancement",
+            "sourceLineageTag": "TypeFinancement",
+            "sourceProviderType": "varchar(255)",
+            "summarizeBy": "none"
+          }
+        ],
+        "lineageTag": "33461fe0-5ec0-4885-a7b2-1e6904337032",
+        "partitions": [
+          {
+            "name": "DimFinancement",
+            "mode": "directLake",
+            "source": {
+              "entityName": "DimFinancement",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo",
+              "type": "entity"
+            }
+          }
+        ],
+        "sourceLineageTag": "[dbo].[DimFinancement]"
+      }
+    ]
+  }
+}

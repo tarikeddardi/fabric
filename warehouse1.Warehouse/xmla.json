@@ -1,0 +1,315 @@
+{
+  "name": "{{Dataset_Name}}",
+  "compatibilityLevel": 1604,
+  "model": {
+    "name": "{{Dataset_Name}}",
+    "culture": "en-US",
+    "collation": "Latin1_General_100_BIN2_UTF8",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "en-US",
+    "tables": [
+      {
+        "name": "DimConstruction",
+        "sourceLineageTag": "[dbo].[DimConstruction]",
+        "columns": [
+          {
+            "name": "ConstructionID",
+            "dataType": "int64",
+            "sourceColumn": "ConstructionID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ConstructionID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TypeConstruction",
+            "dataType": "string",
+            "sourceColumn": "TypeConstruction",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "TypeConstruction",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DimConstruction",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      },
+      {
+        "name": "DimFinancement",
+        "sourceLineageTag": "[dbo].[DimFinancement]",
+        "columns": [
+          {
+            "name": "FinancementID",
+            "dataType": "int64",
+            "sourceColumn": "FinancementID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "FinancementID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TypeFinancement",
+            "dataType": "string",
+            "sourceColumn": "TypeFinancement",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "TypeFinancement",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DimFinancement",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      },
+      {
+        "name": "DimTypologie",
+        "sourceLineageTag": "[dbo].[DimTypologie]",
+        "columns": [
+          {
+            "name": "TypologieID",
+            "dataType": "int64",
+            "sourceColumn": "TypologieID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TypologieID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "Typologie",
+            "dataType": "string",
+            "sourceColumn": "Typologie",
+            "sourceProviderType": "varchar",
+            "sourceLineageTag": "Typologie",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "DimTypologie",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      },
+      {
+        "name": "FactLogement",
+        "sourceLineageTag": "[dbo].[FactLogement]",
+        "columns": [
+          {
+            "name": "LogementID",
+            "dataType": "int64",
+            "sourceColumn": "LogementID",
+            "formatString": "0",
+            "sourceProviderType": "bigint",
+            "sourceLineageTag": "LogementID",
+            "summarizeBy": "count",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "TypologieID",
+            "dataType": "int64",
+            "sourceColumn": "TypologieID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "TypologieID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "ConstructionID",
+            "dataType": "int64",
+            "sourceColumn": "ConstructionID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "ConstructionID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "FinancementID",
+            "dataType": "int64",
+            "sourceColumn": "FinancementID",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "FinancementID",
+            "summarizeBy": "none",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          },
+          {
+            "name": "NbLogement",
+            "dataType": "int64",
+            "sourceColumn": "NbLogement",
+            "formatString": "0",
+            "sourceProviderType": "int",
+            "sourceLineageTag": "NbLogement",
+            "summarizeBy": "sum",
+            "annotations": [
+              {
+                "name": "SummarizationSetBy",
+                "value": "Automatic"
+              }
+            ]
+          }
+        ],
+        "partitions": [
+          {
+            "name": "{{Partition_Name}}",
+            "mode": "directLake",
+            "source": {
+              "type": "entity",
+              "entityName": "FactLogement",
+              "expressionSource": "DatabaseQuery",
+              "schemaName": "dbo"
+            }
+          }
+        ],
+        "annotations": [
+          {
+            "name": "IsTableInBiModel",
+            "value": "True"
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "{{Relationship_Name}}",
+        "fromTable": "FactLogement",
+        "fromColumn": "TypologieID",
+        "toTable": "DimTypologie",
+        "toColumn": "TypologieID"
+      },
+      {
+        "name": "{{Relationship_Name}}1",
+        "fromTable": "FactLogement",
+        "fromColumn": "ConstructionID",
+        "toTable": "DimConstruction",
+        "toColumn": "ConstructionID"
+      },
+      {
+        "name": "{{Relationship_Name}}2",
+        "fromTable": "FactLogement",
+        "fromColumn": "FinancementID",
+        "toTable": "DimFinancement",
+        "toColumn": "FinancementID"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "DatabaseQuery",
+        "kind": "m",
+        "expression": "let\n    database = {{TDS_Endpoint}}\nin\n    database\n"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "SourceLineageTagType",
+        "value": "DatabaseFullyQualifiedName"
+      }
+    ]
+  }
+}

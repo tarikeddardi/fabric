@@ -1,0 +1,60 @@
+{
+  "config": "{\"version\":\"5.59\",\"themeCollection\":{\"baseTheme\":{\"name\":\"CY24SU10\",\"version\":\"5.59\",\"type\":2}},\"activeSectionIndex\":0,\"defaultDrillFilterOtherVisuals\":true,\"linguisticSchemaSyncVersion\":0,\"settings\":{\"useNewFilterPaneExperience\":true,\"allowChangeFilterTypes\":true,\"useStylableVisualContainerHeader\":true,\"queryLimitOption\":6,\"useEnhancedTooltips\":true,\"exportDataMode\":1,\"useDefaultAggregateDisplayName\":true},\"objects\":{\"section\":[{\"properties\":{\"verticalAlignment\":{\"expr\":{\"Literal\":{\"Value\":\"'Top'\"}}}}}],\"outspacePane\":[{\"properties\":{\"expanded\":{\"expr\":{\"Literal\":{\"Value\":\"true\"}}}}}]}}",
+  "layoutOptimization": 0,
+  "resourcePackages": [
+    {
+      "resourcePackage": {
+        "disabled": false,
+        "items": [
+          {
+            "name": "CY24SU10",
+            "path": "BaseThemes/CY24SU10.json",
+            "type": 202
+          }
+        ],
+        "name": "SharedResources",
+        "type": 2
+      }
+    }
+  ],
+  "sections": [
+    {
+      "config": "{}",
+      "displayName": "Page 1",
+      "displayOption": 3,
+      "filters": "[]",
+      "height": 720.00,
+      "name": "e189a4770a0d20a67adb",
+      "visualContainers": [
+        {
+          "config": "{\"name\":\"0c61372705c6e10d16b7\",\"layouts\":[{\"id\":0,\"position\":{\"x\":63,\"y\":356,\"z\":3,\"width\":985,\"height\":310,\"tabOrder\":2}}],\"singleVisual\":{\"visualType\":\"clusteredBarChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DimTypologie.Typologie\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(FactLogement.NbLogement)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimTypologie\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"FactLogement\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"Typologie\"},\"Name\":\"DimTypologie.Typologie\",\"NativeReferenceName\":\"Typologie\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"NbLogement\"}},\"Function\":0},\"Name\":\"Sum(FactLogement.NbLogement)\",\"NativeReferenceName\":\"Somme de NbLogement\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"NbLogement\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 310.00,
+          "width": 985.00,
+          "x": 63.00,
+          "y": 356.00,
+          "z": 3.00
+        },
+        {
+          "config": "{\"name\":\"4cfca8c2785777490649\",\"layouts\":[{\"id\":0,\"position\":{\"x\":461,\"y\":40,\"z\":2,\"width\":671,\"height\":300}}],\"singleVisual\":{\"visualType\":\"clusteredColumnChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DimFinancement.TypeFinancement\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(FactLogement.NbLogement)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"d\",\"Entity\":\"DimFinancement\",\"Type\":0},{\"Name\":\"f\",\"Entity\":\"FactLogement\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TypeFinancement\"},\"Name\":\"DimFinancement.TypeFinancement\",\"NativeReferenceName\":\"TypeFinancement\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"NbLogement\"}},\"Function\":0},\"Name\":\"Sum(FactLogement.NbLogement)\",\"NativeReferenceName\":\"Somme de NbLogement\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"NbLogement\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 300.00,
+          "width": 671.00,
+          "x": 461.00,
+          "y": 40.00,
+          "z": 2.00
+        },
+        {
+          "config": "{\"name\":\"ecf018b511d0040e1057\",\"layouts\":[{\"id\":0,\"position\":{\"x\":63,\"y\":76,\"z\":1,\"width\":342,\"height\":249,\"tabOrder\":1}}],\"singleVisual\":{\"visualType\":\"donutChart\",\"projections\":{\"Category\":[{\"queryRef\":\"DimConstruction.TypeConstruction\",\"active\":true}],\"Y\":[{\"queryRef\":\"Sum(FactLogement.NbLogement)\"}]},\"prototypeQuery\":{\"Version\":2,\"From\":[{\"Name\":\"f\",\"Entity\":\"FactLogement\",\"Type\":0},{\"Name\":\"d\",\"Entity\":\"DimConstruction\",\"Type\":0}],\"Select\":[{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"d\"}},\"Property\":\"TypeConstruction\"},\"Name\":\"DimConstruction.TypeConstruction\",\"NativeReferenceName\":\"TypeConstruction\"},{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"NbLogement\"}},\"Function\":0},\"Name\":\"Sum(FactLogement.NbLogement)\",\"NativeReferenceName\":\"Somme de NbLogement\"}],\"OrderBy\":[{\"Direction\":2,\"Expression\":{\"Aggregation\":{\"Expression\":{\"Column\":{\"Expression\":{\"SourceRef\":{\"Source\":\"f\"}},\"Property\":\"NbLogement\"}},\"Function\":0}}}]},\"drillFilterOtherVisuals\":true,\"hasDefaultSort\":true}}",
+          "filters": "[]",
+          "height": 249.00,
+          "width": 342.00,
+          "x": 63.00,
+          "y": 76.00,
+          "z": 1.00
+        }
+      ],
+      "width": 1280.00
+    }
+  ]
+}
